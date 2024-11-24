@@ -1,15 +1,15 @@
 from setuptools import setup
 
-APP = ['spotify_touchbar.py']
+APP = ['songbar.py']
 DATA_FILES = [('.env', ['.env'])]
 OPTIONS = {
     'argv_emulation': False,
     'iconfile': None,
     'plist': {
         'LSUIElement': True,
-        'CFBundleName': 'SpotifyTouchBar',
-        'CFBundleDisplayName': 'SpotifyTouchBar',
-        'CFBundleIdentifier': 'com.spotifytouchbar.app',
+        'CFBundleName': 'SongBar',
+        'CFBundleDisplayName': 'SongBar',
+        'CFBundleIdentifier': 'com.songbar.app',
         'CFBundleVersion': "1.0.0",
         'CFBundleShortVersionString': "1.0.0",
     },

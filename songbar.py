@@ -11,9 +11,9 @@ SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
 REDIRECT_URI = 'http://localhost:8888/callback'
 SCOPE = 'user-read-currently-playing'
 
-class SpotifyTouchBarApp(rumps.App):
+class SongBarApp(rumps.App):
     def __init__(self):
-        super(SpotifyTouchBarApp, self).__init__("Spotify TouchBar")
+        super(SongBarApp, self).__init__("SongBar")
         self.sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
             client_id=SPOTIFY_CLIENT_ID,
             client_secret=SPOTIFY_CLIENT_SECRET,
@@ -37,4 +37,4 @@ class SpotifyTouchBarApp(rumps.App):
             print(f"Error: {e}")
 
 if __name__ == '__main__':
-    SpotifyTouchBarApp().run()
+    SongBarApp().run()
